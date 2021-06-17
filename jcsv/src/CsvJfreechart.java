@@ -19,7 +19,7 @@ public class CsvJfreechart
         try
         {
 //parsing a CSV file into BufferedReader class constructor
-            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\rahmat.tri\\Documents\\machine1.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\xxxxxxx\\Documents\\machine1.csv"));
             while ((line = br.readLine()) != null)   //returns a Boolean value
             {
                 String[] employee = line.split(splitBy);    // use comma as separator
