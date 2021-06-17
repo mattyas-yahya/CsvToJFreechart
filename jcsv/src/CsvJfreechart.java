@@ -22,18 +22,18 @@ public class CsvJfreechart
             BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\xxxxxxx\\Documents\\machine1.csv"));
             while ((line = br.readLine()) != null)   //returns a Boolean value
             {
-                String[] employee = line.split(splitBy);    // use comma as separator
-                System.out.println(employee[0] +","+ employee[1]  +","+ employee[2]+","+ employee[3]);
+                String[] machine = line.split(splitBy);    // use comma as separator
+                System.out.println(machine[0] +","+ machine[1]  +","+ machine[2]+","+ machine[3]);
 
 
                 HistogramDataset dataset = new HistogramDataset();
-                dataset.addSeries("key1", new double[]{Double.parseDouble(employee[0])}, 50);
-                dataset.addSeries("key2", new double[]{Double.parseDouble(employee[1])}, 50);
-                dataset.addSeries("key3", new double[]{Double.parseDouble(employee[2])}, 50);
-                dataset.addSeries("key4", new double[]{Double.parseDouble(employee[3])}, 50);
+                dataset.addSeries("key1", new double[]{Double.parseDouble(machine[0])}, 50);
+                dataset.addSeries("key2", new double[]{Double.parseDouble(machine[1])}, 50);
+                dataset.addSeries("key3", new double[]{Double.parseDouble(machine[2])}, 50);
+                dataset.addSeries("key4", new double[]{Double.parseDouble(machine[3])}, 50);
 
 
-                JFreeChart histogram = ChartFactory.createHistogram("Normal distribution",
+                JFreeChart histogram = ChartFactory.createHistogram("Normal machine",
                         "y values", "x values", dataset);
 
                 ChartUtils.saveChartAsPNG(new File("histogram.png"), histogram, 450, 400);
